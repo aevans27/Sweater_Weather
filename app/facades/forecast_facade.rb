@@ -4,8 +4,8 @@ class ForecastFacade
     Location.new(service.location_details(location))
   end
 
-  # def route_details(start, finish)
-  #   service = DirectionService.new
-  #   Direction.new(service.route_details(start, finish))
-  # end
+  def weather_details(coords)
+    service = WeatherService.new
+    Weather.new(service.weather_details(coords))
+  end
 end
