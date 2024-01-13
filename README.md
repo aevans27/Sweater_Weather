@@ -1,24 +1,19 @@
-# README
+# Sweater Weather - Project README
+# By Allan Evans
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+- Ruby 3.2.2
+- Rails 7.0.7.2
+- [Faraday](https://github.com/lostisland/faraday) A gem to interact with APIs
+- [SimpleCov](https://github.com/simplecov-ruby/simplecov) A gem for code coverage tracking
+- [ShouldaMatchers](https://github.com/thoughtbot/shoulda-matchers) A gem for testing assertions
 
-Things you may want to cover:
+## Installation Instructions
+ - Fork Repository
+ - `git clone <repo_name>`
+ - `cd <repo_name>`
+ - `bundle install`   
+ - `rails db:{drop,create,migrate,seed}`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Project Description
+Capstone project for Mod 3 at Turing, combines weather and map api's and works as a backend.
