@@ -6,7 +6,7 @@ class Api::V0::ForecastController < ApplicationController
       weather_results = facade.weather_details(location_coords)
       render json: ForecastSerializer.new(weather_results), status: 200
     else
-      render json: {errors: "The weather could not be found"}, status: 404
+      render json: {errors: "Requires a proper location"}, status: 404
     end
   end
 end
