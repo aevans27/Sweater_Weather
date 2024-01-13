@@ -7,6 +7,10 @@ class WeatherService
   def weather_details(location)
     get_url("/v1/forecast.json?q=#{location.lat} #{location.lng}&days=5")
   end
+  
+  def weather_details_sep(lat, lng)
+    get_url("/v1/forecast.json?q=#{lat} #{lng}&days=5")
+  end
 
   def conn
     Faraday.new(url: "http://api.weatherapi.com") do |faraday|

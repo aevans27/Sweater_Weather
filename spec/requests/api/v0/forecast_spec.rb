@@ -65,11 +65,4 @@ require 'rails_helper'
       expect(response.status).to eq(404)
       expect(response_body).to have_key(:errors)
     end
-
-    # it "don't send bad location location" do 
-    #   get "/api/v0/forecast?location=pie 33&badstuff=44"
-    #   response_body = JSON.parse(response.body, symbolize_names: true)
-    #   expect(response.status).to eq(404)
-    #   expect(response_body).to have_key(:errors)
-    # end
   end
