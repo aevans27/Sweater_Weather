@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     namespace :v0 do
       resources :forecast, only: [:index]
       post "/users" => "users#create"
+      post "/sessions" => "sessions#login"
       #  get "/markets/search", to: "markets_lookup#show"
       #  delete "/market_vendors", to: "market_vendors#destroy"
       # # get "/items/find_all", to: "items_lookup#index"

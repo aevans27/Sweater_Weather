@@ -21,8 +21,4 @@ class Api::V0::UsersController < ApplicationController
       render json: {errors: "Empty fields"}, status: 404
     end
   end
-
-  # def user_params
-  #   params.permit(:email, :password, :api_key)  
-  # end
 end
