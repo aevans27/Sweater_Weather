@@ -15,22 +15,3 @@ class Munchies
     @lng = data[:businesses].first[:coordinates][:longitude]
   end
 end
-# {
-#   "data": {
-#     "id": "null",
-#     "type": "munchie",
-#     "attributes": {
-#       "destination_city": "Pueblo, CO",
-#       "forecast": {
-#         "summary": "Cloudy with a chance of meatballs",
-#         "temperature": "83"
-#       },
-#       "restaurant": {
-#         "name": "La Forchetta Da Massi",
-#         "address": "126 S Union Ave, Pueblo, CO 81003",
-#         "rating": 4.5,
-#         "reviews": 148
-#       }
-#     }
-#   }
-# }
