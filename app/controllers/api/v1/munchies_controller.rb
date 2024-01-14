@@ -4,8 +4,9 @@ class Api::V1::MunchiesController < ApplicationController
       facade = MunchiesFacade.new
       munchies_result = facade.munchies_details(params[:destination], params[:food])
       weather_results = facade.weather_details_sep(munchies_result.lat, munchies_result.lng)
-require 'pry';binding.pry
-      # render json: MunchiesSerializer.new(munchies_result, location_results), status: 200
+      munchies_result.forecast[:summary] = weather_results.current_weather[:condition]
+      munchies_result.forecast[:temperature] = weather_results.current_weather[:temperature]
+      render json: MunchiesSerializer.new(munchies_result), status: 200
     else
       render json: {errors: "Requires a proper location"}, status: 404
     end

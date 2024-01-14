@@ -1,10 +1,10 @@
 class Munchies
-  attr_reader :id, :type, :destination_city, :restaurant, :lat, :lng
+  attr_reader :id, :type, :destination_city, :forecast, :restaurant, :lat, :lng
   def initialize(data)
     @id = data[:nothing]
-    @type = "munchies"
+    @type = "munchie"
     @destination_city = "#{data[:businesses].first[:location][:city]}, #{data[:businesses].first[:location][:state]}"
-    @forecast = {}
+    @forecast = {:summary => nil, :temperature => nil}
     @restaurant = {
       :name => data[:businesses].first[:name],
       :address => "#{data[:businesses].first[:location][:display_address].first}, #{data[:businesses].first[:location][:display_address].last}",

@@ -4,7 +4,7 @@ require 'rails_helper'
     it "get weather from a location on successful call" do
       map_response = File.read('spec/fixtures/mapquest_call.json')
       weather_response = File.read('spec/fixtures/weather_call.json')
-      stub_request(:get, "https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=fPSpsmN95gCyAZ0FrcpcjJhTvtIIS99k&location=cincinatti,oh&outFormat=json").
+      stub_request(:get, "https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=#{Rails.application.credentials.maps[:mapquest_key]}&location=cincinatti,oh&outFormat=json").
          with(
            headers: {
           'Accept'=>'*/*',
@@ -13,7 +13,7 @@ require 'rails_helper'
            }).
          to_return(status: 200, body: map_response, headers: {})
 
-         stub_request(:get, "http://api.weatherapi.com/v1/forecast.json?days=5&key=ef101d4dc8e546a4b62171509241301&q=39.10713%20-84.50413").
+         stub_request(:get, "http://api.weatherapi.com/v1/forecast.json?days=5&key=#{Rails.application.credentials.maps[:weather_key]}&q=39.10713%20-84.50413").
          with(
            headers: {
           'Accept'=>'*/*',
