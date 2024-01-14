@@ -1,4 +1,4 @@
-# Sweater Weather - Project README
+# Sweater Weather - Final Assessment - Project README
 # By Allan Evans
 
 ## Setup
