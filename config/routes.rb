@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v0 do
       resources :forecast, only: [:index]
+      post "/users" => "users#create"
       #  get "/markets/search", to: "markets_lookup#show"
       #  delete "/market_vendors", to: "market_vendors#destroy"
       # # get "/items/find_all", to: "items_lookup#index"
