@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :forecast, only: [:index]
       post "/users" => "users#create"
       post "/sessions" => "sessions#login"
+      post "/road_trip" => "road_trip#trip"
       #  get "/markets/search", to: "markets_lookup#show"
       #  delete "/market_vendors", to: "market_vendors#destroy"
       # # get "/items/find_all", to: "items_lookup#index"
