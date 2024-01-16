@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?per_page=1&query=denver,%20co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Authorization:
+      - DxPwd1wkRSudkFUl2zAMkAWzdtOE4w0TMyO29TTTfAjiH98pLkhfssFw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2024 22:49:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 8469ea078aba533b-DEN
+      Cf-Cache-Status:
+      - MISS
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=86400
+      Etag:
+      - W/"cd85ce701fd8a5eaecacb3f1a1583ff6"
+      Expires:
+      - Wed, 17 Jan 2024 22:49:52 GMT
+      Access-Control-Allow-Headers:
+      - Accept, Content-Type, Content-Length, Accept-Encoding, Authorization, User-Agent
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ratelimit-Limit:
+      - '25000'
+      X-Ratelimit-Remaining:
+      - '24979'
+      X-Ratelimit-Reset:
+      - '1708021944'
+      X-Request-Id:
+      - e249ef1f-82f0-4b25-9215-dc2d71f75583
+      X-Runtime:
+      - '0.030453'
+      X-Server:
+      - anteater
+      Set-Cookie:
+      - __cf_bm=SFSxCiEltwe1vJdUG8JbzlBLFvR91pl0GUDvA_wCpHs-1705445392-1-AXaFDD3pUgxYVmxhjIzwc9EusdGpu1HEK4CvW18RD2TBmSlaNETQr1S0hXA9bzzxf/wCe50doWaKJ9oDtUCISsc=;
+        path=/; expires=Tue, 16-Jan-24 23:19:52 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"per_page":1,"photos":[{"id":3289417,"width":2500,"height":3701,"url":"https://www.pexels.com/photo/woman-wearing-yellow-sweater-leaning-on-railing-3289417/","photographer":"Aidan
+        Roof","photographer_url":"https://www.pexels.com/@rozegold","photographer_id":1271136,"avg_color":"#848483","src":{"original":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg","large2x":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/3289417/pexels-photo-3289417.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Woman
+        Wearing Yellow Sweater Leaning on Railing"}],"total_results":1692,"next_page":"https://api.pexels.com/v1/search/?page=2\u0026per_page=1\u0026query=denver%2C+co"}'
+  recorded_at: Tue, 16 Jan 2024 22:49:52 GMT
+recorded_with: VCR 6.2.0

@@ -13,8 +13,12 @@
  - `git clone <repo_name>`
  - `cd <repo_name>`
  - `bundle install`   
- - `rails db:{drop,create,migrate,seed}`
+ - `rails db:{drop,create,migrate}`
  - VCR cassettes may need to be refreshed to get proper test results
 
 ## Project Description
 Capstone project for Mod 3 at Turing, combines weather and map api's and works as a backend.
+Uses apis from:
+  - [MapQuest Geocoding](https://developer.mapquest.com/documentation/geocoding-api/)
+  - [Weather API](https://www.weatherapi.com/)
+  - [Pexels](https://www.pexels.com/api/)

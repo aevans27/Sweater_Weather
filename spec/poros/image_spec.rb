@@ -5,7 +5,7 @@ RSpec.describe Image do
     attrs = {
       id: nil,
       type: "image",
-      photos:[{url: "photo.url", photographer: "test"}],
+      photos:[{url: "photo.url", photographer: "test"}]
     }
 
     image = Image.new(attrs, "here")
