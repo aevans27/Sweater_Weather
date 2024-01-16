@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.mapquestapi.com/directions/v2/route?key=fPSpsmN95gCyAZ0FrcpcjJhTvtIIS99k
+    body:
+      encoding: UTF-8
+      string: '{"locations":["New York, NY","London, UK"]}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jan 2024 17:28:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '1000000000'
+      X-Ratelimit-Remaining-2628000:
+      - '999999677'
+      Ratelimit-Limit:
+      - '1000000000'
+      Ratelimit-Remaining:
+      - '999999677'
+      Ratelimit-Reset:
+      - '145915'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 9bd6a900-b494-11ee-ae70-a537c359afd6
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=2,geocoding=2
+      Etag:
+      - W/"116-R2DA5tIYj04dtma2cJ5ADQu1kN8"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyNCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDI0IE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 16 Jan 2024 17:28:05 GMT
+recorded_with: VCR 6.2.0

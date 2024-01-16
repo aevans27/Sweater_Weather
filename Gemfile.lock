@@ -243,6 +243,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uri (0.13.0)
+    vcr (6.2.0)
     webmock (3.19.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -277,6 +278,7 @@ DEPENDENCIES
   rspec-rails
   simplecov
   tzinfo-data
+  vcr
   webmock
 
 RUBY VERSION

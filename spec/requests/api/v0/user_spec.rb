@@ -17,6 +17,19 @@ require 'rails_helper'
       expect(response_body[:id]).to be_an(Integer)
     end
 
+    it "try to create user that exists" do
+      params = {:email => "person@woohoo.com", :password => "abc123", :password_confirmation => "abc123"}
+      post "/api/v0/users", params: params.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
+      expect(response).to be_successful
+
+      params = {:email => "person@woohoo.com", :password => "abc123", :password_confirmation => "abc123"}
+      post "/api/v0/users", params: params.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response.status).to eq(404)
+      expect(response_body).to have_key(:errors)
+      expect(response_body[:errors]).to eq("User already exists")
+    end
+
     it "passwords don't match" do 
       params = {:email => "person@woohoo.com", :password => "abc123", :password_confirmation => "abc"}
       post "/api/v0/users", params: params.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
