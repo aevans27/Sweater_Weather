@@ -14,6 +14,7 @@
  - `cd <repo_name>`
  - `bundle install`   
  - `rails db:{drop,create,migrate,seed}`
+ - VCR cassettes may need to be refreshed to get proper test results
 
 ## Project Description
 Capstone project for Mod 3 at Turing, combines weather and map api's and works as a backend.
